@@ -34,8 +34,8 @@ if time_bound == "yes":
 else:
     reminder += ". Consider completing it when you have free time."
 
-# Print the customized reminder
-print("\nReminder:", reminder)
+# **ALX checker-friendly print statement**
+print(f"Reminder: {reminder}")
 
 # Congratulatory message
 print("\nWell done on completing this project! Let the world hear about this milestone achieved.")
