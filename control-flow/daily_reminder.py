@@ -19,7 +19,7 @@ while True:
         break
     print("Invalid input. Please enter 'yes' or 'no'.")
 
-# Process task based on priority
+# Process task based on priority using match-case
 match priority:
     case "high":
         reminder = f"'{task}' is a high priority task"
@@ -37,5 +37,6 @@ else:
 # Print the customized reminder
 print("\nReminder:", reminder)
 
-print("\nWell done on completing this project! Let the world hear about this milestone achieved.\n")
+# Congratulatory message
+print("\nWell done on completing this project! Let the world hear about this milestone achieved.")
 print("🚀 Click here to tweet! 🚀")
