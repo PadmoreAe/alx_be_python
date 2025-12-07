@@ -1,19 +1,20 @@
-from programming_paradigm.bank_account import BankAccount
+import sys
+from bank_account import BankAccount
 
 def main():
-    account = BankAccount()
+    account = BankAccount(250)
 
-    import sys
-    command = sys.argv[1]
+    command, *params = sys.argv[1].split(':')
+    amount = float(params[0]) if params else None
 
-    if command.startswith("deposit:"):
-        amount = float(command.split(":")[1])
+    if command == "deposit" and amount is not None:
         account.deposit(amount)
-    elif command.startswith("withdraw:"):
-        amount = float(command.split(":")[1])
+    elif command == "withdraw" and amount is not None:
         account.withdraw(amount)
     elif command == "display":
         account.display_balance()
+    else:
+        print("Invalid command.")
 
 if __name__ == "__main__":
     main()
