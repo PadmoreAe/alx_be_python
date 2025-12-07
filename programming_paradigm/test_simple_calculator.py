@@ -20,7 +20,7 @@ class TestSimpleCalculator(unittest.TestCase):
 
     def test_divide(self):
         self.assertEqual(self.calc.divide(10, 2), 5)
-        self.assertIsNone(self.calc.divide(5, 0))
+        self.assertIsNone(self.calc.divide(5, 0))   
 
 if __name__ == "__main__":
     unittest.main()
